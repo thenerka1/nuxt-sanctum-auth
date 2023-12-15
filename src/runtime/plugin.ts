@@ -74,7 +74,7 @@ export default defineNuxtPlugin(async () => {
   }
 
   const setToken = (token: string) => {
-    useCookie(config.csrf.tokenCookieKey).value = token
+    useCookie(config.csrf.tokenCookieKey, config.cookie).value = token
   }
 
   const clearToken = () => {
